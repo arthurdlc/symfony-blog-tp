@@ -14,7 +14,6 @@ class PageType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('image')
             ->add('text',CKEditorType::class)
         ;
     }
