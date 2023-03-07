@@ -3,28 +3,10 @@
 {% block title %}Page{% endblock %}
 
 {% block body %}
-    <h1>Page</h1>
+    <h1>{{ page.title }}</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ page.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ page.title }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ page.image }}</td>
-            </tr>
-            <tr>
-                <th>Text</th>
-                <td>{{ page.text }}</td>
-            </tr>
-        </tbody>
-    </table>
+    {{ page.text|raw }}
+
 
     <a href="{{ path('app_page_index') }}">back to list</a>
 

@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Page;
 use Symfony\Component\Form\AbstractType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,7 +15,7 @@ class PageType extends AbstractType
         $builder
             ->add('title')
             ->add('image')
-            ->add('text')
+            ->add('text',CKEditorType::class)
         ;
     }
 
