@@ -70,6 +70,36 @@
         <target>Nos Formations</target>
       </trans-unit>
 
+      <trans-unit id="M00Bb3V13" resname="Category">
+        <source>Category</source>
+        <target>Catégories</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V14" resname="Category Index">
+        <source>Category Index</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V15" resname="Add new Category">
+        <source>Add new Category</source>
+        <target>Ajouter des catégories</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V16" resname="Pages">
+        <source>Pages</source>
+        <target>Pages</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V17" resname="List Pages">
+        <source>List Pages</source>
+        <target>Liste des pages</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V18" resname="Create Pages">
+        <source>Create Pages</source>
+        <target>Créer des pages</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>
