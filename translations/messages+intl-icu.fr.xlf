@@ -9,97 +9,82 @@
         <source>Hello!</source>
         <target>Bonjour !</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V1" resname="Home">
+      <trans-unit id="OnhpU4i" resname="Home">
         <source>Home</source>
         <target>Accueil</target>
       </trans-unit>
-      
-      <trans-unit id="M00Bb3V2" resname="Purpose">
+      <trans-unit id="1OiDCnH" resname="Purpose">
         <source>Purpose</source>
         <target>Proposition</target>
       </trans-unit>
-      
-      <trans-unit id="M00Bb3V3" resname="Give your opinion">
+      <trans-unit id="Yx2g6Fh" resname="Give your opinion">
         <source>Give your opinion</source>
         <target>Donner votre opinion</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V4" resname="Formation center">
+      <trans-unit id="406ewrL" resname="Formation center">
         <source>Formation center</source>
         <target>Centre de formation</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V5" resname="Sign up">
+      <trans-unit id="XiuOllA" resname="Sign up">
         <source>Sign up</source>
         <target>S'inscrire</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V6" resname="Sign out">
+      <trans-unit id="SPDT05f" resname="Sign out">
         <source>Sign out</source>
         <target>Se deconnecter</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V7" resname="Sign in">
+      <trans-unit id="v9QCsvb" resname="Sign in">
         <source>Sign in</source>
         <target>Se Connecter</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V8" resname="Register">
+      <trans-unit id="u3I07BJ" resname="Register">
         <source>Register</source>
         <target>Enregistrez-vous</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V9" resname="List of pages">
-        <source>List of Pages</source>
+      <trans-unit id="MqrnzR3" resname="List of pages">
+        <source>List of pages</source>
         <target>Liste des pages</target>
       </trans-unit>
-      
-      <trans-unit id="M00Bb3V10" resname="Create a page">
+      <trans-unit id="toIjOlA" resname="Create a page">
         <source>Create a page</source>
         <target>Créer une page</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V11" resname="Formation in coming">
+      <trans-unit id="mtqP1cQ" resname="Formation in coming">
         <source>Formation in coming</source>
         <target>Formation à venir</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V12" resname="Our Formation">
+      <trans-unit id="5hS9zT." resname="Our Formation">
         <source>Our Formation</source>
         <target>Nos Formations</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V13" resname="Category">
+      <trans-unit id="KSwG8AR" resname="Category">
         <source>Category</source>
         <target>Catégories</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V14" resname="Category Index">
+      <trans-unit id="ExBeWxe" resname="Category Index">
         <source>Category Index</source>
         <target>Liste des catégories</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V15" resname="Add new Category">
+      <trans-unit id="mFCnV1s" resname="Add new Category">
         <source>Add new Category</source>
         <target>Ajouter des catégories</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V16" resname="Pages">
+      <trans-unit id="kEbaFq6" resname="Pages">
         <source>Pages</source>
         <target>Pages</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V17" resname="List Pages">
+      <trans-unit id="uXKmlmm" resname="List Pages">
         <source>List Pages</source>
         <target>Liste des pages</target>
       </trans-unit>
-
-      <trans-unit id="M00Bb3V18" resname="Create Pages">
+      <trans-unit id="4ghov84" resname="Create Pages">
         <source>Create Pages</source>
         <target>Créer des pages</target>
       </trans-unit>
-
+      <trans-unit id="on2hBYJ" resname="🏡Home">
+        <source>🏡Home</source>
+        <target>🏡Accueil</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
