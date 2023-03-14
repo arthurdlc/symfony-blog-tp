@@ -9,6 +9,67 @@
         <source>Hello!</source>
         <target>Bonjour !</target>
       </trans-unit>
+
+      <trans-unit id="M00Bb3V1" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      
+      <trans-unit id="M00Bb3V2" resname="Purpose">
+        <source>Purpose</source>
+        <target>Proposition</target>
+      </trans-unit>
+      
+      <trans-unit id="M00Bb3V3" resname="Give your opinion">
+        <source>Give your opinion</source>
+        <target>Donner votre opinion</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V4" resname="Formation center">
+        <source>Formation center</source>
+        <target>Centre de formation</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V5" resname="Sign up">
+        <source>Sign up</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V6" resname="Sign out">
+        <source>Sign out</source>
+        <target>Se deconnecter</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V7" resname="Sign in">
+        <source>Sign in</source>
+        <target>Se Connecter</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V8" resname="Register">
+        <source>Register</source>
+        <target>Enregistrez-vous</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V9" resname="List of pages">
+        <source>List of Pages</source>
+        <target>Liste des pages</target>
+      </trans-unit>
+      
+      <trans-unit id="M00Bb3V10" resname="Create a page">
+        <source>Create a page</source>
+        <target>Créer une page</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V11" resname="Formation in coming">
+        <source>Formation in coming</source>
+        <target>Formation à venir</target>
+      </trans-unit>
+
+      <trans-unit id="M00Bb3V12" resname="Our Formation">
+        <source>Our Formation</source>
+        <target>Nos Formations</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

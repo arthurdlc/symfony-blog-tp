@@ -20,14 +20,14 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/page/1">FC-Pro</a>
+              <a class="navbar-brand" href="/page/1"> <img src="../../../.." </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/page/1">{{ 'home'|trans}}</a>
+                    <a class="nav-link active" aria-current="page" href="/page/1">{{ '🏡Home'|trans}}</a>
                   </li>
                   {% if is_granted('ROLE_ADMIN') %}
                     
@@ -37,14 +37,14 @@
                       {{ 'Our Formation'|trans}}
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">{{ 'formation in comming'|trans}}</a></li>
+                      <li><a class="dropdown-item" href="#">{{ 'Formation in coming'|trans}}</a></li>
                       <li><a class="dropdown-item" href="#">{{ 'Purpose'|trans}}</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">{{ 'give your opinion'|trans}}</a></li>
+                      <li><a class="dropdown-item" href="#">{{ 'Give your opinion'|trans}}</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link inactive" aria-current="page" href="#">{{ 'formations center'|trans}}</a>
+                    <a class="nav-link inactive" aria-current="page" href="#">{{ 'Formation center'|trans}}</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,14 +58,12 @@
                 </ul>
                 {% endif %}
                 <ul class="navbar-nav align-right mb-2 mb-lg-0" >
-                    <li class="nav-item">
                     {% if app.user %}
-                        <a class="nav-link" href="/logout">Sign out</a>
+                        <li class="nav-item"><a class="nav-link" href="/logout">{{ 'Sign out'|trans}}</a></li>
                     {% else %}
-                        <li><a class="nav-link" href="/register">Sign Up</a></li>
-                        <li><a class="nav-link" href="/login">Sign In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">{{ 'Sign up'|trans}}</a></li>
+                        <li class="nav-item"><button class="btn btn-primary"><a class="nav-link" href="/login">{{ 'Sign in'|trans}}</a></button></li>
                     {% endif %}
-                    </li>
                 </ul>
               </div>
             </div>
