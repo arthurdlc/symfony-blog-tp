@@ -20,8 +20,8 @@
                 <td>{{ page.id }}</td>
                 <td>{{ page.title }}</td>
                 <td>
-                    <a class="btn btn-warning" href="{{ path('app_page_show', {'id': page.id}) }}">show</a>
-                    <a class="btn btn-warning" href="{{ path('app_page_edit', {'id': page.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('app_page_show', {'id': page.id}) }}">show</a>
+                    <a class="btn btn-secondary" href="{{ path('app_page_edit', {'id': page.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -32,5 +32,5 @@
         </tbody>
     </table>
 
-    <a class="btn btn-warning" href="{{ path('app_page_new') }}">Create new</a>
+    <a class="btn btn-success" href="{{ path('app_page_new') }}">Create new page</a>
 {% endblock %}
