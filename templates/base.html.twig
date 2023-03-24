@@ -27,7 +27,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">{{ '🏡Home'|trans}}</a>
+                    <a class="nav-link active" aria-current="page" href="/page/1">{{ '🏡Home'|trans}}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/formation/catalog">{{ 'Catalog'|trans}}</a>
                   </li>
                   {% if is_granted('ROLE_ADMIN') %}
                     

@@ -8,17 +8,17 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Title</th>
-                <th>Image</th>
+                <th>Number</th>
 
             </tr>
         </thead>
         <tbody>
         {% for page in pages %}
             <tr>
-                <td>{{ page.id }}</td>
                 <td>{{ page.title }}</td>
+                <td>{{ page.NumPage }}</td>
+
                 <td>
                     <a class="btn btn-primary" href="{{ path('app_page_show', {'id': page.id}) }}">show</a>
                     <a class="btn btn-secondary" href="{{ path('app_page_edit', {'id': page.id}) }}">edit</a>

@@ -26,6 +26,9 @@ class Page
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $text = null;
 
+    #[ORM\Column]
+    private ?int $NumPage = null;
+
 
 
     public function getId(): ?int
@@ -65,6 +68,18 @@ class Page
     public function setText(?string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function getNumPage(): ?int
+    {
+        return $this->NumPage;
+    }
+
+    public function setNumPage(int $NumPage): self
+    {
+        $this->NumPage = $NumPage;
 
         return $this;
     }

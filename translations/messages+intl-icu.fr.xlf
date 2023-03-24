@@ -85,6 +85,50 @@
         <source>🏡Home</source>
         <target>🏡Accueil</target>
       </trans-unit>
+      <trans-unit id="8q4emSj" resname="Training Center">
+        <source>Training Center</source>
+        <target>Centre de Formation</target>
+      </trans-unit>
+      <trans-unit id="OHfRSIm" resname="Catalog">
+        <source>Catalog</source>
+        <target>Catalogue</target>
+      </trans-unit>
+      <trans-unit id="u4w4qMc" resname="Rate Formation">
+        <source>Rate Formation</source>
+        <target>Notez la Formation</target>
+      </trans-unit>
+      <trans-unit id="MmquLxq" resname="Tuto">
+        <source>Tuto</source>
+        <target>__Tuto</target>
+      </trans-unit>
+      <trans-unit id=".9iQMcM" resname="Qualiopi Certificate">
+        <source>Qualiopi Certificate</source>
+        <target>Certification Qualiopi</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="lQIpxeA" resname="Legal Informations">
+        <source>Legal Informations</source>
+        <target>Information Légale</target>
+      </trans-unit>
+      <trans-unit id="NCmWKA4" resname="Virgin">
+        <source>Virgin</source>
+        <target>Vierge</target>
+      </trans-unit>
+      <trans-unit id="SaY9cr4" resname="Formation">
+        <source>Formation</source>
+        <target>Formations</target>
+      </trans-unit>
+      <trans-unit id="IzTfw_D" resname="List Formation">
+        <source>List Formation</source>
+        <target>Liste des Formations</target>
+      </trans-unit>
+      <trans-unit id="DbrLQ_Y" resname="Create Formation">
+        <source>Create Formation</source>
+        <target>Créer une Formation</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

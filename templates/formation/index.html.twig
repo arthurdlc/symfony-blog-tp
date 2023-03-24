@@ -10,11 +10,11 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Content</th>
+                {#<th>Content</th>#}
                 <th>Capacity</th>
                 <th>Price</th>
                 <th>CreatedAt</th>
-                <th>Description</th>
+                {#<th>Description</th>#}
                 <th>StartDate</th>
                 <th>EndDate</th>
                 <th>actions</th>
@@ -25,11 +25,11 @@
             <tr>
                 <td>{{ formation.id }}</td>
                 <td>{{ formation.name }}</td>
-                <td>{{ formation.content }}</td>
+                {#<td>{{ formation.content }}</td>#}
                 <td>{{ formation.capacity }}</td>
                 <td>{{ formation.price }}</td>
                 <td>{{ formation.createdAt ? formation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ formation.description }}</td>
+                {#<td>{{ formation.description }}</td>#}
                 <td>{{ formation.startDate ? formation.startDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ formation.endDate ? formation.endDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
