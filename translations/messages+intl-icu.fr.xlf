@@ -129,6 +129,26 @@
         <source>Create Formation</source>
         <target>Créer une Formation</target>
       </trans-unit>
+      <trans-unit id="R70pB1_" resname="Content">
+        <source>Content</source>
+        <target>Contenu</target>
+      </trans-unit>
+      <trans-unit id="TFL6rV3" resname="Start Date">
+        <source>Start Date</source>
+        <target>Date de Début</target>
+      </trans-unit>
+      <trans-unit id="6XCVHPt" resname="End Date">
+        <source>End Date</source>
+        <target>Date de fin</target>
+      </trans-unit>
+      <trans-unit id="rmXQllU" resname="Capacity">
+        <source>Capacity</source>
+        <target>Capacité</target>
+      </trans-unit>
+      <trans-unit id="k8kchR5" resname="Price">
+        <source>Price</source>
+        <target>Tarifs</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

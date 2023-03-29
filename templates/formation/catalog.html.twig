@@ -4,23 +4,25 @@
 
 {% block body %}
     <h1>Formation index</h1>
+    
+    {% for formation in formations %}
     {% set number = 0 %}
         <div class="accordion" id="accordionExample">
-            {% for formation in formations %}
+            
             {% set number = number + 1 %}
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse {{number}}" data-bs-target="#collapse-{{ formation.id }}" aria-expanded="true" aria-controls="collapse-{{ formation.id }}">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse {{number}}" data-bs-target="#collapse{{ formation.id }}" aria-expanded="true" aria-controls="collapse-{{ formation.id }}">
                         {{ formation.name }}
                     </button>
                 </h2>
-                <div id="collapse-{{ formation.id }}" class="accordion-collapse collapse {% if number < 2%} show {% endif %}" data-bs-parent="#accordionExample">
+                <div id="collapse-{{ formation.id }}" class="accordion-collapse collapse {% if number < 2 %} show {% endif %}" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        Content : {{ formation.content }}<br><strong>
-                        Start date : {{ formation.startDate ? formation.startDate|date('Y-m-d H:i:s') : '' }} <br>
-                        End Date : {{ formation.endDate ? formation.endDate|date('Y-m-d H:i:s') : '' }} <br>
-                        capacity : {{ formation.capacity }} <br>
-                        Price : {{ formation.price }}</strong>
+                        {{ 'Content'|trans}} : {{ formation.content }}<br><strong>
+                        {{ 'Start Date'|trans}} : {{ formation.startDate ? formation.startDate|date('Y-m-d H:i:s') : '' }} <br>
+                        {{ 'End Date '|trans}} : {{ formation.endDate ? formation.endDate|date('Y-m-d H:i:s') : '' }} <br>
+                        {{ 'Capacity'|trans}} : {{ formation.capacity }} <br>
+                        {{ 'Price'|trans}} : {{ formation.price }}</strong>
                     </div>
                 </div>
             </div>

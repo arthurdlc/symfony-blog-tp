@@ -6,6 +6,7 @@ use App\Entity\Formation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class Formation1Type extends AbstractType
 {
@@ -16,10 +17,20 @@ class Formation1Type extends AbstractType
             ->add('content')
             ->add('capacity')
             ->add('price')
-            ->add('createdAt')
+            //  ->add('createdAt')
             ->add('description')
-            ->add('startDate')
-            ->add('endDate')
+            ->add('startDate', DateType::class, [
+                'widget' => 'single_text',
+                // this is actually the default format for single_text
+                'format' => 'yyyy-MM-dd',
+                'input' => 'datetime_immutable',
+            ])
+            ->add('endDate',  DateType::class, [
+                'widget' => 'single_text',
+                // this is actually the default format for single_text
+                'format' => 'yyyy-MM-dd',
+                'input' => 'datetime_immutable',
+            ])
             ->add('speaker')
             ->add('createdBy')
         ;
