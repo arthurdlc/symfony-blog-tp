@@ -1,4 +1,43 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+    
+<div class="row">
+<div class="col">
+    <img width="50%" src="{{ asset('uploads/images/' ~ formation.ImageFileName) }}"> <br/>
+    </div>
+    <div class="col">
+    Nom de la Formation : {{ form_widget(form.name) }} <br />
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        Contenue de la Formation : {{ form_widget(form.content) }}<br />
+    </div>
+    <div class="col">
+        Capacité : {{ form_widget(form.capacity) }} <br />
+    </div>
+</div>
+<div class="row">    
+    <div class="col">
+        Tarif : {{ form_widget(form.price) }}<br />
+    </div>
+    <div class="col">
+        Intervenant(s) : {{ form_widget(form.speaker) }}<br />
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        Date de début de la formation : {{ form_widget(form.startDate) }}<br />
+    </div>
+    <div class="col">
+        Date de fin de la formation : {{ form_widget(form.endDate) }}<br />
+    </div>
+</div>
+    <div>
+        Createur : {{ form_widget(form.createdBy) }}<br />
+    </div>
+
+
+    {{ form_widget(form.description) }}<br />
+
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

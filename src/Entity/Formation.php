@@ -46,6 +46,9 @@ class Formation
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $endDate = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image_file_name = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -168,6 +171,18 @@ class Formation
     public function setEndDate(?\DateTimeImmutable $endDate): self
     {
         $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    public function getImageFileName(): ?string
+    {
+        return $this->image_file_name;
+    }
+
+    public function setImageFileName(?string $image_file_name): self
+    {
+        $this->image_file_name = $image_file_name;
 
         return $this;
     }

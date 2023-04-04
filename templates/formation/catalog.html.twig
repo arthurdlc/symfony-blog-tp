@@ -19,10 +19,11 @@
                 <div id="collapse-{{ formation.id }}" class="accordion-collapse collapse {% if number < 2 %} show {% endif %}" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         {{ 'Content'|trans}} : {{ formation.content }}<br><strong>
-                        {{ 'Start Date'|trans}} : {{ formation.startDate ? formation.startDate|date('Y-m-d H:i:s') : '' }} <br>
-                        {{ 'End Date '|trans}} : {{ formation.endDate ? formation.endDate|date('Y-m-d H:i:s') : '' }} <br>
+                        {{ 'Start Date'|trans}} : {{ formation.startDate ? formation.startDate|date('Y-m-d à H:i') : '' }} <br>
+                        {{ 'End Date '|trans}} : {{ formation.endDate ? formation.endDate|date('Y-m-d à H:i') : '' }} <br>
                         {{ 'Capacity'|trans}} : {{ formation.capacity }} <br>
                         {{ 'Price'|trans}} : {{ formation.price }}</strong>
+                        <br><a href="/formation/pdf/{{formation.id}}" class="btn btn-primary">{{'Download PDF'|trans}}</a>
                     </div>
                 </div>
             </div>
