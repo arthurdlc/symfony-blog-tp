@@ -99,7 +99,7 @@
       </trans-unit>
       <trans-unit id="MmquLxq" resname="Tuto">
         <source>Tuto</source>
-        <target>__Tuto</target>
+        <target>Tuto</target>
       </trans-unit>
       <trans-unit id=".9iQMcM" resname="Qualiopi Certificate">
         <source>Qualiopi Certificate</source>
@@ -148,6 +148,46 @@
       <trans-unit id="k8kchR5" resname="Price">
         <source>Price</source>
         <target>Tarifs</target>
+      </trans-unit>
+      <trans-unit id="r6r_v__" resname="An error is append; ">
+        <source>An error is append; </source>
+        <target>une ERREURes arrivée</target>
+      </trans-unit>
+      <trans-unit id="6fMs9Bk" resname="This page is Protected ! ">
+        <source>This page is Protected ! </source>
+        <target>cette page est protéger par un joueur barette ! </target>
+      </trans-unit>
+      <trans-unit id="m5arhv1" resname="An error is append">
+        <source>An error is append</source>
+        <target>Une ERREUR est arrivée</target>
+      </trans-unit>
+      <trans-unit id="YYO_CIP" resname="Download PDF">
+        <source>Download PDF</source>
+        <target>Télécharger le PDF</target>
+      </trans-unit>
+      <trans-unit id="zzNMu3h" resname="Tutos">
+        <source>Tutos</source>
+        <target>Tutos</target>
+      </trans-unit>
+      <trans-unit id="Pa4oLaI" resname="Formation in cumming">
+        <source>Formation in cumming</source>
+        <target>Formation a venir</target>
+      </trans-unit>
+      <trans-unit id="mdwTdZ9" resname="Propose a formation">
+        <source>Propose a formation</source>
+        <target>Proposer une formation</target>
+      </trans-unit>
+      <trans-unit id="P1OpgCc" resname="Formation in comming">
+        <source>Formation in comming</source>
+        <target>Formations a venir</target>
+      </trans-unit>
+      <trans-unit id="YsVAIxB" resname="Our formations">
+        <source>Our formations</source>
+        <target>Nos formations</target>
+      </trans-unit>
+      <trans-unit id="5_ZibIF" resname="Propose Fromation">
+        <source>Propose Fromation</source>
+        <target>Proposer Fromation</target>
       </trans-unit>
     </body>
   </file>

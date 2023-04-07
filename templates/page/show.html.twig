@@ -8,9 +8,9 @@
     {{ page.text|raw }}
 
 
-    <a href="{{ path('app_page_index') }}">back to list</a>
+    <a class="btn btn-secondary" href="{{ path('app_page_index') }}"><i class="fa-solid fa-arrow-left"></i>  back to list</a>
 
-    <a href="{{ path('app_page_edit', {'id': page.id}) }}">edit</a>
+    <a class="btn btn-warning"href="{{ path('app_page_edit', {'id': page.id}) }}"><i class="fa-solid fa-pen-to-square"></i>  edit</a>
 
     {{ include('page/_delete_form.html.twig') }}
 {% endblock %}

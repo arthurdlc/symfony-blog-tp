@@ -3,11 +3,14 @@
 <div class="row">
 <div class="col">
     <img width="50%" src="{{ asset('uploads/images/' ~ formation.ImageFileName) }}"> <br/>
+    
     </div>
     <div class="col">
     Nom de la Formation : {{ form_widget(form.name) }} <br />
+    Image : {{form_widget(form.image)}}
     </div>
 </div>
+<br/>
 <div class="row">
     <div class="col">
         Contenue de la Formation : {{ form_widget(form.content) }}<br />
@@ -35,9 +38,7 @@
     <div>
         Createur : {{ form_widget(form.createdBy) }}<br />
     </div>
+    description : {{ form_widget(form.description) }}<br />
 
-
-    {{ form_widget(form.description) }}<br />
-
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

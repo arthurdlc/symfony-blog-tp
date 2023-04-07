@@ -33,8 +33,9 @@
                 <td>{{ formation.startDate ? formation.startDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ formation.endDate ? formation.endDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a class="btn btn-warning" href="{{ path('app_formation_show', {'id': formation.id}) }}"><i class="fa-solid fa-user-plus"></i></a>
-                    <a class="btn btn-warning"  href="{{ path('app_formation_edit', {'id': formation.id}) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a class="btn btn-primary" href="{{ path('app_formation_show', {'id': formation.id}) }}"><i class="fa-solid fa-eye"></i></a>
+                    <a class="btn btn-secondary"  href="{{ path('app_formation_edit', {'id': formation.id}) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a class="btn btn-secondary"  href="{{ path('app_formation_duplicate', {'id': formation.id}) }}"><i class="fa fa-copy"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -45,5 +46,5 @@
         </tbody>
     </table>
 
-    <a class="btn btn-primary" href="{{ path('app_formation_new') }}"><i class="fa-solid fa-plus"></i>  Create new</a>
+    <a class="btn btn-primary" href="{{ path('app_formation_new') }}"><i class="fa-solid fa-plus"></i>  Create new Formation</a>
 {% endblock %}

@@ -32,42 +32,50 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/page/1"><i class="fa-solid fa-vihara"></i> {{ 'Home'|trans}}</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/formation/catalog">{{ 'Catalog'|trans}}</a>
+
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-person-chalkboard"></i>  
+                      {{ 'Our formations'|trans}}
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/formation/futur"><i class="fa-solid fa-calendar-days"></i>  {{ 'Formation in comming'|trans}}</a></li>
+                      <li><a class="dropdown-item" href="/#"><i class="fa-solid fa-lightbulb"></i>   {{ 'Propose Fromation '|trans}}</a></li>
+                      <li><a class="dropdown-item" aria-current="page" href="/formation/catalog"><i class="fa-solid fa-indent"></i>  {{ 'Catalog'|trans}}</a></li>
+                    </ul>
                   </li>
+
                   {% if is_granted('ROLE_ADMIN') %}
-                    
-                  
-                  
+
                   <li class="nav-item">
                     <a class="nav-link inactive" aria-current="page" href="#">{{ 'Formation center'|trans}}</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file"></i>  
                       {{ 'Pages'|trans}}
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/page">{{ 'List Pages'|trans}}</a></li>
+                      <li><a class="dropdown-item" href="/page"><i class="fa-solid fa-list"></i>  {{ 'List Pages'|trans}}</a></li>
                       <li><a class="dropdown-item" href="/page/new"><i class="fa-solid fa-plus"></i> {{ 'Create Pages'|trans}}</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-sharp fa-solid fa-graduation-cap"></i>  
                       {{ 'Formation'|trans}}
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/formation">{{ 'List Formation'|trans}}</a></li>
-                      <li><a class="dropdown-item" href="/formation/new"><i class="fa-solid fa-plus"></i> x{{ 'Create Formation'|trans}}</a></li>
+                      <li><a class="dropdown-item" href="/formation"><i class="fa-solid fa-list"></i>  {{ 'List Formation'|trans}}</a></li>
+                      <li><a class="dropdown-item" href="/formation/new"><i class="fa-solid fa-plus"></i>  {{ 'Create Formation'|trans}}</a></li>
                     </ul>
                   </li>
                 </ul>
                 {% endif %}
+
                 <ul class="navbar-nav align-right mb-2 mb-lg-0" >
                     {% if app.user %}
                         <li class="nav-item "><a class="nav-link text-danger" href="/logout">{{ 'Sign out'|trans}}</a></li>
                     {% else %}
-                        <li class="nav-item"><a class="nav-link bg-success" href="/register"><i class="fa-solid fa-user-plus"></i>{{ 'Sign up'|trans}}</a></li>
-                        <li class="nav-item"><a class="nav-link text-primary" href="/login">{{ 'Sign in'|trans}}</a></li>
+                        <li class="nav-item"><a class="btn" href="/register"><i class="fa-solid fa-user-plus"></i>  {{ 'Sign up'|trans}}</a></li>
+                        <li class="nav-item"><a class="btn btn-primary" href="/login"><i class="fa-solid fa-right-to-bracket"></i>  {{ 'Sign in'|trans}}</a></li>
                     {% endif %}
                 </ul>
               </div>

@@ -18,6 +18,31 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 #[Route('/formation')]
 class FormationController extends AbstractController
 {
+    #[Route('/{id}/duplicate', name: 'app_formation_duplicate', methods: ['GET', 'POST'])]
+    public function duplicate(Request $request, ImageUploadHelper $imageUploader, Formation $formation, FormationRepository $formationRepository, SluggerInterface $slugger, TranslatorInterface $translator ): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $formation2=new Formation();
+        $formation2->setCreatedAt($formation->getCreatedAt());
+        $formation2->setCreatedBy($formation->getCreatedBy());
+        $formation2->setContent($formation->getContent());
+        $formation2->setDescription($formation->getDescription());
+
+        $formation2->setCapacity($formation->getCapacity());
+        $formation2->setStartDate($formation->getStartDate());
+        $formation2->setEndDate($formation->getEndDate());
+        $formation2->setImageFileName($formation->getImageFileName());
+        $formation2->setName($formation->getName());
+        $formation2->setPrice($formation->getPrice());
+
+        $formationRepository->save($formation2, true);
+        $this->addFlash('success', $translator->trans('the formation is copied'));
+
+
+        return $this->redirectToRoute('app_formation_index');
+    }
+
     #[Route('/pdf/{id}', name: 'app_formation_pdf', methods: ['GET'])]
     public function pdf(Formation $formation): Response
     {
@@ -44,6 +69,14 @@ class FormationController extends AbstractController
         $pdf->WriteHTML($formation->getContent());
 
         return $pdf->Output('fcpro-formation-'.$formation->getId() .'.pdf');
+    }
+
+    #[Route('/futur', name: 'app_formation_futur', methods: ['GET'])]
+    public function futur(FormationRepository $formationRepository): Response
+    {
+        return $this->render('formation/futur.html.twig', [
+            'formations' => $formationRepository->findAllInTheFutur(),
+        ]);
     }
 
     #[Route('/catalog', name: 'app_formation_catalog', methods: ['GET'])]
@@ -77,6 +110,11 @@ class FormationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $errorMessage = $imageUploader->uploadImage($form, $formation) ; 
+            if (!empty($errorMessage)){
+                $this->addFlash('danger', $translator->trans('An error is append; ') . $errorMessage);
+            }
             $formationRepository->save($formation, true);
 
             return $this->redirectToRoute('app_formation_index', [], Response::HTTP_SEE_OTHER);
@@ -120,7 +158,7 @@ class FormationController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_formation_delete', methods: ['POST'])]
-    public function delete(Request $request, Formation $formation, FormationRepository $formationRepository): Response
+    public function delete(Request $request, Formation $formation, FormationRepository $formationRepository ): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 

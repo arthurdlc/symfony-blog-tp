@@ -5,10 +5,11 @@ namespace App\Controller;
 use App\Entity\Page;
 use App\Form\PageType;
 use App\Repository\PageRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/page')]
 class PageController extends AbstractController
@@ -74,11 +75,16 @@ class PageController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_page_delete', methods: ['POST'])]
-    public function delete(Request $request, Page $page, PageRepository $pageRepository): Response
+    public function delete(Request $request, Page $page, PageRepository $pageRepository, TranslatorInterface $translator): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
         
         if ($this->isCsrfTokenValid('delete'.$page->getId(), $request->request->get('_token'))) {
+
+            if ($formation->getId() < 11 ){
+                $this->addFlash('warning', $tanslator->trans('This page is Protected ! '));
+            }
+
             $pageRepository->remove($page, true);
         }
 

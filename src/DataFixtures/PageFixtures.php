@@ -43,8 +43,8 @@ class PageFixtures extends Fixture
 
         $home = new Page();
         $home->setNumPage(5);
-        $home->setTitle($this->translator->trans("Tuto"));
-        $home->setText("<h1>" . $this->translator->trans("Tuto") . "</h1>");
+        $home->setTitle($this->translator->trans("Tutos"));
+        $home->setText("<h1>" . $this->translator->trans("Tutos") . "</h1>");
         $manager->persist($home);
 
         $home = new Page();

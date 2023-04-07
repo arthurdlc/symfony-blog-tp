@@ -12,7 +12,8 @@ class ImageUploadHelper {
     }
 
 
-    public function uploadImage($form){
+    public function uploadImage($form, $formation) : String { 
+        $errorMessage = "";
         $imageFile = $form->get('image')->getData();
 
             if ($imageFile) {
@@ -21,7 +22,7 @@ class ImageUploadHelper {
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
                 try {
                     $imageFile->move(
-                        $this->getParameter('images_directory'),
+                        $this->params->get('images_directory'),
                         $newFilename
                     );
                 } catch (FileException $e) {
@@ -29,5 +30,6 @@ class ImageUploadHelper {
                 }
                 $formation->setimageFilename($newFilename);
             }
+            return $errorMessage;
     }
 }
