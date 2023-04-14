@@ -48,7 +48,7 @@ class FormationRepository extends ServiceEntityRepository
            ->andWhere('f.startDate > :val')
            ->setParameter('val', new DateTime())
            ->orderBy('f.startDate', 'ASC')
-           ->setMaxResults(3)
+        //    ->setMaxResults(2)
            ->getQuery()
            ->getResult()
        ;

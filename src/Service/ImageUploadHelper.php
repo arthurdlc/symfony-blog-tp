@@ -2,13 +2,15 @@
 namespace App\Service;
 
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 class ImageUploadHelper {
     private $slugger;
+    private $params;
 
-
-    public function __construct( SluggerInterface $slugger){
+    public function __construct( SluggerInterface $slugger, ParameterBagInterface $params){
         $this->slugger = $slugger;
+        $this->params = $params;
     }
 
 
@@ -18,7 +20,7 @@ class ImageUploadHelper {
 
             if ($imageFile) {
                 $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeFilename = $slugger->slug($originalFilename);
+                $safeFilename = $this->slugger->slug($originalFilename);
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
                 try {
                     $imageFile->move(

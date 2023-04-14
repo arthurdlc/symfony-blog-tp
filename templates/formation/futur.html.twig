@@ -6,54 +6,67 @@
     <h1>Formation index</h1>
 
 
-
-    <div id="carouselExampleCaptions" class="carousel slide">
+<center>
+<div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
 <div class="carousel-inner">
-    <div class="carousel-item active">
+
+    {% set i = 0 %}
+    {% for paquetDe3Formations in tousLespaquets %}
+    {% set i = i + 1 %}
+
+    <div class="carousel-item {% if i == 1 %} active {% endif %}">
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="/uploads/images/{{ paquetDe3Formations[1].imageFileName }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">{{ paquetDe3Formations[1].name }}</h5>
+                        <p class="card-text">{{ paquetDe3Formations[1].description }}</p>
+                        <a href="/formation/pdf/{{ paquetDe3Formations[1].id }}" target="_blank" class="btn btn-primary">{{'Download PDF'|trans}}</a>
                     </div>
                 </div>
             </div>
         </div>
+        {% if paquetDe3Formations[2] is defined %}
         <div class="carousel-item">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="/uploads/images/{{ paquetDe3Formations[1].imageFileName }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ paquetDe3Formations[2].name }}</h5>
+                            <p class="card-text">{{ paquetDe3Formations[2].description }}</p>
+                            <a href="/formation/pdf/{{ paquetDe3Formations[2].id }}" target="_blank" class="btn btn-primary">{{'Download PDF'|trans}}</a>
                         </div>
                     </div>
                 </div>    
         </div>
+        {% endif %}
+        {% if paquetDe3Formations[3] is defined %}
         <div class="carousel-item">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="/uploads/images/{{ paquetDe3Formations[3].imageFileName }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ paquetDe3Formations[3].name }}</h5>
+                            <p class="card-text">{{ paquetDe3Formations[3].description }}</p>
+                            <a href="/formation/pdf/{{ paquetDe3Formations[3].id }}" target="_blank" class="btn btn-primary">{{'Download PDF'|trans}}</a>
                         </div>
                     </div>
-                </div>    
+                </div>
+   
         </div>
+        {% endif %}
+        {% endfor %}
+  </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-backward"></i></span>
+    <i class="fa-solid fa-backward"></i>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
@@ -61,34 +74,34 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+</center>
 
 
-
-    <table class="table">
+    {# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                {#<th>Content</th>#}
+                {#<th>Content</th>
                 <th>Capacity</th>
                 <th>Price</th>
                 <th>CreatedAt</th>
-                {#<th>Description</th>#}
+                {#<th>Description</th>
                 <th>StartDate</th>
                 <th>EndDate</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for formation in formations %}
+
             <tr>
                 <td>{{ formation.id }}</td>
                 <td>{{ formation.name }}</td>
-                {#<td>{{ formation.content }}</td>#}
+                {#<td>{{ formation.content }}</td>
                 <td>{{ formation.capacity }}</td>
                 <td>{{ formation.price }}</td>
                 <td>{{ formation.createdAt ? formation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                {#<td>{{ formation.description }}</td>#}
+                {#<td>{{ formation.description }}</td>
                 <td>{{ formation.startDate ? formation.startDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ formation.endDate ? formation.endDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
@@ -100,9 +113,9 @@
             <tr>
                 <td colspan="10">no records found</td>
             </tr>
-        {% endfor %}
+        
         </tbody>
-    </table>
+    </table> #}
 
     <a class="btn btn-primary" href="{{ path('app_formation_new') }}"><i class="fa-solid fa-plus"></i>  Create new Formation</a>
 {% endblock %}
